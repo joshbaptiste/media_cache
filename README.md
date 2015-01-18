@@ -35,9 +35,9 @@ sparsed file.
 After a certain configurable time period the sparsed directory files
 will be truncated back to 10%.
 
-What is the point of this?
+**What is the point of this?**
 
-I have a cheap VPS that provides plenty of bandwidth but not disk, in essence
+I'm a cheap bastard who does not want to pay for a full server to host 1TB+ of media on the cloud or a dedicated server. I have a cheap VPS that provides plenty of bandwidth but not disk, in essence
 this setup will mirror my 1TB of films at home, where I will only need 100GB
 to stream any movie from my VPS and since bandwidth on the VPS is no issue I
 can share my Plex collection with much more friends and not worry about my
