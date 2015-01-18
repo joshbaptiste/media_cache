@@ -20,7 +20,7 @@ cached fuse directory in two pieces.
 When a read() operation occurs on any file in the cached directory
 the media_cache daemon proxies the file descriptor (FD) and reads commence from
 the sparse file, then a background Go routine starts appending the remaining data
-from the mirrored directory
+from the mirrored directory without disrupting the user aka the movie watcher.
 
 ```
 Sparsed(filling up)         Actual
