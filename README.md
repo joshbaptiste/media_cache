@@ -5,9 +5,9 @@ on file contents.
 
 Mirrors files from one directory to another creating a sparse version
 of each file for space savings and dynamically appends to sparsed file when a read() 
-operation occurs it.
+operation occurs on it.
 
-The cached directory file is 10% the size of the original. 
+The cached directory file is 10% (configurable) the size of the original. 
 The mirrored directory is read and a sparse version of each file is written to the 
 cached fuse directory in two pieces. 
  
@@ -18,7 +18,7 @@ cached fuse directory in two pieces.
 ```
 
 When a read() operation occurs on any file in the cached directory
-the media_cache daemon proxies the file descriptor (FD) and reads commence from
+the media_cache_server daemon proxies the file descriptor (FD) and reads commence from
 the sparse file, then a background Go routine starts appending the remaining data
 from the mirrored directory without disrupting the user aka the movie watcher.
 
